@@ -21,5 +21,8 @@
         "test": "vendor/bin/phpunit",
         "test:coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-html coverage",
         "precommit": "composer phpstan && composer phpcs:fix && composer test"
+    },
+    "require": {
+        "fakerphp/faker": "^1.24"
     }
 }
