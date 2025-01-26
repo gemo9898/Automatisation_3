@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Configuration de base -->
-<phpunit
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
-bootstrap="vendor/autoload.php"
-colors="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
 
-  <!-- Configuration des répertoires de tests-->
-  <testsuites>
-      <testsuite name="Tests">
-        <directory >tests</directory>
-      </testsuite>
-  </testsuites>
-  <!-- Configuration des répertoires de sources-->
-  <source>
-      <include>
-        <directory suffix=".php">src</directory>
-      </include>
-  </source>
+    <coverage>
+        <include>
+            <directory>src/Entity</directory>
+        </include>
+    </coverage>
 </phpunit>
